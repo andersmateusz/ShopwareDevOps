@@ -21,3 +21,6 @@ There will be setup with binding options. For frontends only /var/www/html/custo
 
 # Production
 There will be separate commands, docker-compose.yml, composer.json and package.json with caching more strict requirements and dockware production image 
+
+# Plugins shared with other projects
+Locking to project by branches or tags
