@@ -1,6 +1,6 @@
 services:
     shopware:
-      image: dockware/dev:latest
+      image: dockware/dev:6.4.19.0
       volumes:
        - "db_volume:/var/lib/mysql"
        - type: bind
@@ -14,10 +14,10 @@ services:
       networks:
          - web
       environment:
-         - XDEBUG_ENABLED=1
-         - PHP_VERSION=8.0
-         - NODE_VERSION=16
-         - COMPOSER_VERSION=2
+         #- XDEBUG_ENABLED=1
+         #- PHP_VERSION=8.0
+         #- NODE_VERSION=16
+         #- COMPOSER_VERSION=2
 volumes:
   db_volume:
     driver: local
