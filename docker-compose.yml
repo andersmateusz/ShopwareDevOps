@@ -1,0 +1,26 @@
+services:
+    shopware:
+      image: dockware/dev:latest
+      volumes:
+       - "db_volume:/var/lib/mysql"
+       - type: bind
+         source: shopware/html
+         target: /var/www/html
+      ports:
+         - "8080:80"
+         - "9999:9999"
+         - "9998:9998"
+         - "8888:8888"
+      networks:
+         - web
+      environment:
+         - XDEBUG_ENABLED=1
+         - PHP_VERSION=8.0
+         - NODE_VERSION=16
+         - COMPOSER_VERSION=2
+volumes:
+  db_volume:
+    driver: local
+networks:
+  web:
+    external: false
