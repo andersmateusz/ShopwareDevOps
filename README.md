@@ -8,8 +8,10 @@ in static-plugins folder run git submodules update ;
 inside container run /var/www/html/update.sh;
 
 # Add new plugin release to repo
+## At https://github.com/andersmateusz/ShopwareSampleProject
 add submodule to repo;
 change composer.json and package.json;
+## Locally
 in static-plugins folder run git submodules update;
 inside container run update.sh;
 activate new plugin;
